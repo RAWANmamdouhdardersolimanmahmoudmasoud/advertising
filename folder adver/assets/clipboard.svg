@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 128 128">
+
+  <defs>
+
+    <linearGradient id="paper"
+        x1="0%" y1="0%"
+        x2="0%" y2="100%">
+
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F7F7F7"/>
+
+    </linearGradient>
+
+    <linearGradient id="clip"
+        x1="0%" y1="0%"
+        x2="100%" y2="100%">
+
+      <stop offset="0%" stop-color="#F7D774"/>
+      <stop offset="100%" stop-color="#D4A017"/>
+
+    </linearGradient>
+
+    <filter id="shadow">
+
+      <feDropShadow
+        dx="0"
+        dy="4"
+        stdDeviation="4"
+        flood-color="#14284B"
+        flood-opacity=".18"/>
+
+    </filter>
+
+  </defs>
+
+  <!-- Paper -->
+
+  <rect
+      x="24"
+      y="20"
+      rx="14"
+      width="80"
+      height="92"
+      fill="url(#paper)"
+      stroke="#E6E6E6"
+      stroke-width="2"
+      filter="url(#shadow)"/>
+
+  <!-- Clip -->
+
+  <rect
+      x="44"
+      y="10"
+      rx="8"
+      width="40"
+      height="18"
+      fill="url(#clip)"/>
+
+  <!-- Lines -->
+
+  <rect
+      x="38"
+      y="44"
+      width="52"
+      height="5"
+      rx="3"
+      fill="#1E3A68"/>
+
+  <rect
+      x="38"
+      y="58"
+      width="40"
+      height="5"
+      rx="3"
+      fill="#1E3A68"
+      opacity=".85"/>
+
+  <rect
+      x="38"
+      y="72"
+      width="48"
+      height="5"
+      rx="3"
+      fill="#1E3A68"
+      opacity=".75"/>
+
+  <rect
+      x="38"
+      y="86"
+      width="32"
+      height="5"
+      rx="3"
+      fill="#1E3A68"
+      opacity=".65"/>
+
+  <!-- Check -->
+
+  <circle
+      cx="92"
+      cy="90"
+      r="12"
+      fill="#D4A017"/>
+
+  <path
+      d="M87 90 L91 94 L98 86"
+      stroke="white"
+      stroke-width="3"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      fill="none"/>
+
+</svg>

@@ -1,0 +1,1412 @@
+/* =====================================================
+   TALKVERSE SURVEY
+   PART 2 - LAYOUT
+===================================================== */
+
+:root{
+
+--navy:#14284B;
+--navy2:#1E3A68;
+
+--gold:#D4A017;
+--gold-light:#F7D774;
+--gold-dark:#B8860B;
+
+--bg:#F8F9FB;
+
+--card-width:560px;
+
+--radius:34px;
+
+}
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+html{
+
+font-size:16px;
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+font-family:"Fredoka",sans-serif;
+
+background:var(--bg);
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+position:relative;
+
+}
+
+/* ==========================================
+BACKGROUND
+========================================== */
+
+.bg-grid{
+
+position:absolute;
+
+inset:0;
+
+background-image:
+
+radial-gradient(
+
+rgba(20,40,75,.045) 1px,
+
+transparent 1px
+
+);
+
+background-size:28px 28px;
+
+z-index:-5;
+
+}
+
+/* ==========================================
+CIRCLES
+========================================== */
+
+.bg-circle{
+
+position:absolute;
+
+border-radius:50%;
+
+filter:blur(12px);
+
+z-index:-4;
+
+}
+
+.circle-1{
+
+width:420px;
+height:420px;
+
+top:-180px;
+left:-160px;
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(247,215,116,.55),
+
+transparent 70%
+
+);
+
+}
+
+.circle-2{
+
+width:500px;
+height:500px;
+
+bottom:-220px;
+right:-220px;
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(20,40,75,.08),
+
+transparent 75%
+
+);
+
+}
+
+/* ==========================================
+CONFETTI OVERLAY (يظهر أولاً)
+========================================== */
+
+#confetti{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100vw;
+height:100vh;
+
+z-index:1000;
+
+pointer-events:none;
+
+transition:opacity .8s ease;
+
+opacity:1;
+
+background:var(--bg);
+
+}
+
+#confetti.hidden{
+
+opacity:0;
+
+pointer-events:none;
+
+}
+
+/* ==========================================
+CARD (مخفي في البداية)
+========================================== */
+
+.card{
+
+display:none;
+
+width:min(92%,var(--card-width));
+
+background:#ffffff;
+
+border-radius:var(--radius);
+
+padding:28px 32px 16px;  /* ✅ ضغط البادينج أكثر */
+
+position:relative;
+
+box-shadow:
+
+0 30px 70px rgba(20,40,75,.12);
+
+overflow:hidden;
+
+transform:scale(0.88);  /* ✅ تصغير البطاقة عشان تظهر كل العناصر */
+
+transform-origin:center center;
+
+}
+
+/* ==========================================
+SPARKLES
+========================================== */
+
+.sparkle{
+
+position:absolute;
+
+width:20px;  /* ✅ تصغير */
+
+opacity:.9;
+
+}
+
+.sparkle-left{
+
+top:18px;
+left:18px;
+
+}
+
+.sparkle-right{
+
+top:30px;
+right:22px;
+
+}
+
+/* ==========================================
+BURST
+========================================== */
+
+.burst{
+
+position:relative;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+margin-top:0;
+
+margin-bottom:10px;  /* ✅ تصغير */
+
+}
+
+.burst img{
+
+width:210px;  /* ✅ تصغير */
+
+display:block;
+
+}
+
+.burst h1{
+
+position:absolute;
+
+color:#fff;
+
+font-size:2.2rem;  /* ✅ تصغير */
+
+font-weight:700;
+
+letter-spacing:1px;
+
+text-shadow:
+
+0 6px 12px rgba(0,0,0,.15);
+
+}
+
+/* ==========================================
+BADGE
+========================================== */
+
+.badge{
+
+margin:auto;
+
+width:max-content;
+
+padding:
+
+6px 18px;  /* ✅ تصغير */
+
+border-radius:999px;
+
+background:
+
+linear-gradient(
+
+90deg,
+
+var(--gold),
+
+var(--gold-dark)
+
+);
+
+color:#fff;
+
+font-weight:600;
+
+font-size:0.85rem;  /* ✅ تصغير */
+
+box-shadow:
+
+0 14px 28px rgba(212,160,23,.25);
+
+}
+
+/* ==========================================
+TITLE
+========================================== */
+
+.card h2{
+
+margin-top:12px;  /* ✅ تصغير */
+
+text-align:center;
+
+font-size:1.5rem;  /* ✅ تصغير */
+
+font-weight:700;
+
+color:var(--navy);
+
+line-height:1.2;
+
+}
+
+.divider{
+
+width:50px;  /* ✅ تصغير */
+
+height:4px;  /* ✅ تصغير */
+
+background:var(--gold);
+
+border-radius:999px;
+
+margin:
+
+8px auto 14px;  /* ✅ تصغير */
+
+}
+
+/* ==========================================
+ICON
+========================================== */
+
+.icon-wrapper{
+
+width:68px;  /* ✅ تصغير */
+
+height:68px;  /* ✅ تصغير */
+
+margin:auto;
+
+border-radius:20px;  /* ✅ تصغير */
+
+background:#fff;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+border:
+
+2px solid rgba(212,160,23,.15);
+
+box-shadow:
+
+0 18px 35px rgba(20,40,75,.08);
+
+}
+
+.icon-wrapper img{
+
+width:34px;  /* ✅ تصغير */
+
+}
+
+/* ==========================================
+DESCRIPTION
+========================================== */
+
+.description{
+
+margin-top:12px;  /* ✅ تصغير */
+
+text-align:center;
+
+font-size:0.95rem;  /* ✅ تصغير */
+
+line-height:1.4;  /* ✅ تصغير */
+
+color:var(--navy2);
+
+}
+
+.description br{
+
+display:none;  /* ✅ إزالة الفواصل الإضافية */
+
+}
+
+/* ==========================================
+TIME
+========================================== */
+
+.time-box{
+
+margin-top:10px;  /* ✅ تصغير */
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:6px;  /* ✅ تصغير */
+
+font-size:0.95rem;  /* ✅ تصغير */
+
+color:var(--navy);
+
+}
+
+.clock{
+
+font-size:1.2rem;  /* ✅ تصغير */
+
+}
+
+.time-box strong{
+
+color:var(--gold-dark);
+
+font-size:1rem;  /* ✅ تصغير */
+
+}
+/* =====================================================
+   PART 3 - CARD DETAILS & BUTTON
+===================================================== */
+
+
+/* ===========================
+SURVEY BUTTON
+=========================== */
+
+#surveyBtn{
+
+margin:10px auto 0;  /* ✅ تصغير */
+
+width:100%;
+max-width:280px;  /* ✅ تصغير */
+
+height:54px;  /* ✅ تصغير */
+
+display:flex;
+
+justify-content:space-between;
+align-items:center;
+
+padding:0 10px 0 20px;  /* ✅ تصغير */
+
+text-decoration:none;
+
+background:linear-gradient(
+135deg,
+var(--navy),
+var(--navy2)
+);
+
+border-radius:18px;  /* ✅ تصغير */
+
+color:#fff;
+
+font-size:0.95rem;  /* ✅ تصغير */
+
+font-weight:600;
+
+box-shadow:
+0 18px 40px rgba(20,40,75,.22);
+
+transition:.35s ease;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+
+/* Shine Effect */
+
+#surveyBtn::before{
+
+content:"";
+
+position:absolute;
+
+left:-120px;
+
+top:0;
+
+width:80px;
+height:100%;
+
+background:
+
+rgba(255,255,255,.28);
+
+transform:skewX(-25deg);
+
+transition:.7s;
+
+}
+
+#surveyBtn:hover::before{
+
+left:120%;
+
+}
+
+
+/* Hover */
+
+#surveyBtn:hover{
+
+transform:
+
+translateY(-6px)
+scale(1.03);
+
+box-shadow:
+
+0 25px 50px rgba(20,40,75,.28);
+
+}
+
+
+/* Text */
+
+#surveyBtn span{
+
+letter-spacing:.3px;
+
+}
+
+
+/* Arrow */
+
+#surveyBtn img{
+
+width:36px;  /* ✅ تصغير */
+height:36px;  /* ✅ تصغير */
+
+transition:
+transform .35s ease,
+filter .35s ease;
+
+}
+
+#surveyBtn:hover img{
+
+transform:
+translateX(6px)
+scale(1.08);
+
+filter:
+drop-shadow(0 4px 10px rgba(255,255,255,.35));
+
+}
+
+/* ===========================
+FOOTER - التعديلات المطلوبة
+=========================== */
+
+.footer{
+
+margin-top:10px;  /* ✅ تصغير */
+
+display:flex;
+
+flex-direction:column;  /* ترتيب عمودي: النص فوق الصورة */
+
+align-items:center;
+
+gap:4px;  /* ✅ تصغير المسافة بين النص والصورة */
+
+}
+
+.footer span{
+
+font-size:13px;  /* ✅ تصغير */
+
+font-weight:500;
+
+color:#1E3A68;
+
+letter-spacing:.3px;
+
+}
+
+.footer img{
+
+width:100%;  /* ✅ عرض كامل */
+
+max-height:30px;  /* ✅ أنحف بكثير */
+
+object-fit:contain;  /* يحافظ على النسبة مع القص */
+
+display:block;
+
+margin-top:0;
+
+}
+
+/* ===========================
+CARD DECORATION
+=========================== */
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+top:-120px;
+
+right:-120px;
+
+width:260px;
+height:260px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(247,215,116,.22),
+
+transparent 70%
+
+);
+
+pointer-events:none;
+
+}
+
+.card::after{
+
+content:"";
+
+position:absolute;
+
+left:-80px;
+
+bottom:-80px;
+
+width:180px;
+height:180px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(
+
+circle,
+
+rgba(20,40,75,.05),
+
+transparent 72%
+
+);
+
+pointer-events:none;
+
+}
+
+
+/* ===========================
+SOFT GLOW
+=========================== */
+
+.icon-wrapper{
+
+transition:.35s;
+
+}
+
+.icon-wrapper:hover{
+
+transform:
+
+translateY(-5px)
+scale(1.05);
+
+box-shadow:
+
+0 20px 40px rgba(212,160,23,.18);
+
+}
+
+
+/* ===========================
+TEXT EFFECTS
+=========================== */
+
+.badge{
+
+transition:.35s;
+
+}
+
+.badge:hover{
+
+transform:scale(1.05);
+
+}
+
+.burst img{
+
+transition:.45s;
+
+}
+
+.card:hover .burst img{
+
+transform:
+
+rotate(-2deg)
+scale(1.03);
+
+}
+
+.card:hover{
+
+transform:translateY(-2px);
+
+transition:.35s;
+
+}
+/* =====================================================
+   PART 4 - ANIMATIONS
+===================================================== */
+
+
+/* ===========================
+ENTRANCE ANIMATION
+=========================== */
+
+.burst,
+.badge,
+.card h2,
+.divider,
+.icon-wrapper,
+.description,
+.time-box,
+#surveyBtn,
+.footer{
+
+opacity:0;
+
+transform:translateY(25px);
+
+animation:fadeUp .8s ease forwards;
+
+}
+
+.burst{animation-delay:.1s;}
+.badge{animation-delay:.25s;}
+.card h2{animation-delay:.4s;}
+.divider{animation-delay:.55s;}
+.icon-wrapper{animation-delay:.7s;}
+.description{animation-delay:.85s;}
+.time-box{animation-delay:1s;}
+#surveyBtn{animation-delay:1.15s;}
+.footer{animation-delay:1.3s;}
+
+
+/* ===========================
+BURST FLOAT
+=========================== */
+
+.burst{
+
+animation-name:
+fadeUp,
+burstFloat;
+
+animation-duration:
+.8s,
+4s;
+
+animation-delay:
+.1s,
+1.2s;
+
+animation-fill-mode:
+forwards,
+both;
+
+animation-iteration-count:
+1,
+infinite;
+
+}
+
+@keyframes burstFloat{
+
+0%,100%{
+
+transform:
+translateY(0);
+
+}
+
+50%{
+
+transform:
+translateY(-8px);
+
+}
+
+}
+
+
+/* ===========================
+SPARKLE
+=========================== */
+.sparkle{
+
+position:absolute;
+
+width:20px;
+
+opacity:.95;
+
+animation:
+
+sparkleFloat 3s ease-in-out infinite,
+
+sparkleRotate 8s linear infinite;
+
+filter:
+
+drop-shadow(0 0 8px rgba(247,215,116,.45));
+
+}
+
+.sparkle-left{
+
+top:26px;
+
+left:24px;
+
+}
+
+.sparkle-right{
+
+top:46px;
+
+right:28px;
+
+animation-delay:1.5s;
+
+}
+
+@keyframes sparkleFloat{
+
+0%,100%{
+
+transform:
+translateY(0)
+scale(1);
+
+opacity:.8;
+
+}
+
+50%{
+
+transform:
+translateY(-6px)
+scale(1.15);
+
+opacity:1;
+
+}
+
+}
+
+@keyframes sparkleRotate{
+
+from{
+
+rotate:0deg;
+
+}
+
+to{
+
+rotate:360deg;
+
+}
+
+}
+/* ===========================
+ICON
+=========================== */
+
+.icon-wrapper{
+
+animation-name:
+fadeUp,
+iconFloat;
+
+animation-duration:
+.8s,
+3s;
+
+animation-delay:
+.7s,
+1.5s;
+
+animation-fill-mode:
+forwards,
+both;
+
+animation-iteration-count:
+1,
+infinite;
+
+}
+
+@keyframes iconFloat{
+
+0%,100%{
+
+transform:
+translateY(0);
+
+}
+
+50%{
+
+transform:
+translateY(-6px);
+
+}
+
+}
+
+
+/* ===========================
+BUTTON PULSE
+=========================== */
+
+#surveyBtn{
+
+animation-name:
+fadeUp,
+buttonPulse;
+
+animation-duration:
+.8s,
+2.8s;
+
+animation-delay:
+1.15s,
+2.3s;
+
+animation-fill-mode:
+forwards,
+both;
+
+animation-iteration-count:
+1,
+infinite;
+
+}
+
+@keyframes buttonPulse{
+
+0%,100%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.03);
+
+}
+
+}
+
+
+/* ===========================
+FADE UP
+=========================== */
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:
+translateY(25px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:
+translateY(0);
+
+}
+
+}
+
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+.card{
+
+padding:20px 20px 14px;
+
+border-radius:24px;
+
+transform:scale(0.84);  /* ✅ تصغير أكثر على التابلت */
+
+}
+
+.burst img{
+
+width:170px;
+
+}
+
+.burst h1{
+
+font-size:1.8rem;
+
+}
+
+.badge{
+
+font-size:.75rem;
+
+padding:6px 14px;
+
+}
+
+.card h2{
+
+font-size:1.3rem;
+
+margin-top:10px;
+
+}
+
+.divider{
+
+width:40px;
+
+height:3px;
+
+margin:6px auto 10px;
+
+}
+
+.description{
+
+font-size:.85rem;
+
+margin-top:8px;
+
+line-height:1.3;
+
+}
+
+.icon-wrapper{
+
+width:56px;
+height:56px;
+
+}
+
+.icon-wrapper img{
+
+width:28px;
+
+}
+
+.time-box{
+
+font-size:.85rem;
+
+margin-top:8px;
+
+gap:4px;
+
+}
+
+.time-box strong{
+
+font-size:.95rem;
+
+}
+
+#surveyBtn{
+
+height:48px;
+
+font-size:.85rem;
+
+padding-left:16px;
+
+margin-top:8px;
+
+max-width:240px;
+
+}
+
+#surveyBtn img{
+
+width:30px;
+height:30px;
+
+padding:4px;
+
+}
+
+.footer img{
+
+max-height:25px;  /* ✅ أنحف */
+
+}
+
+.footer span{
+
+font-size:12px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+body{
+
+padding:10px;
+
+}
+
+.card{
+
+width:100%;
+
+padding:16px 12px 12px;
+
+transform:scale(0.80);  /* ✅ تصغير أكثر على الموبايل */
+
+border-radius:20px;
+
+}
+
+.burst img{
+
+width:140px;
+
+}
+
+.burst h1{
+
+font-size:1.5rem;
+
+}
+
+.burst{
+
+margin-bottom:6px;
+
+}
+
+.card h2{
+
+font-size:1.1rem;
+
+margin-top:8px;
+
+}
+
+.divider{
+
+margin:4px auto 8px;
+
+width:30px;
+
+}
+
+.description{
+
+font-size:.8rem;
+
+margin-top:6px;
+
+}
+
+.time-box{
+
+font-size:.8rem;
+
+margin-top:6px;
+
+gap:4px;
+
+}
+
+#surveyBtn{
+
+height:44px;
+
+font-size:.8rem;
+
+margin-top:6px;
+
+max-width:200px;
+
+border-radius:14px;
+
+padding:0 8px 0 14px;
+
+}
+
+.footer{
+
+margin-top:6px;
+
+gap:2px;
+
+}
+
+.footer img{
+
+max-height:20px;  /* ✅ أنحف */
+
+}
+
+.footer span{
+
+font-size:11px;
+
+}
+
+}
+/* ==========================================
+   BALLOON POP EXPLOSION
+========================================== */
+
+.explosion-piece{
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    pointer-events:none;
+
+    will-change:
+        transform,
+        opacity;
+
+    animation-name:
+        balloonPop;
+
+    animation-timing-function:
+        cubic-bezier(.15,.85,.25,1);
+
+    animation-fill-mode:
+        forwards;
+
+}
+
+
+/* ==========================================
+   EXPLOSION ANIMATION
+========================================== */
+
+@keyframes balloonPop{
+
+    0%{
+
+        transform:
+            translate(-50%, -50%)
+            scale(0);
+
+        opacity:1;
+
+    }
+
+    8%{
+
+        transform:
+            translate(-50%, -50%)
+            scale(1.8);
+
+        opacity:1;
+
+    }
+
+    25%{
+
+        transform:
+            translate(
+                calc(-50% + var(--x) * .35),
+                calc(-50% + var(--y) * .35)
+            )
+            rotate(
+                calc(var(--rotation) * .3)
+            )
+            scale(1);
+
+        opacity:1;
+
+    }
+
+    65%{
+
+        transform:
+            translate(
+                calc(-50% + var(--x) * .75),
+                calc(-50% + var(--y) * .75)
+            )
+            rotate(
+                calc(var(--rotation) * .7)
+            )
+            scale(.85);
+
+        opacity:.85;
+
+    }
+
+    100%{
+
+        transform:
+            translate(
+                calc(-50% + var(--x)),
+                calc(-50% + var(--y))
+            )
+            rotate(var(--rotation))
+            scale(.2);
+
+        opacity:0;
+
+    }
+
+}
+.confetti-piece{
+
+position:absolute;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+pointer-events:none;
+
+will-change:transform;
+
+}
+
+.confetti-piece img{
+
+width:100%;
+
+height:100%;
+
+display:block;
+
+}
