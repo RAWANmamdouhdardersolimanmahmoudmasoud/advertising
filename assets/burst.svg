@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 420 250">
+
+  <defs>
+
+    <linearGradient id="goldGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%">
+
+      <stop offset="0%" stop-color="#F7D774"/>
+
+      <stop offset="55%" stop-color="#D4A017"/>
+
+      <stop offset="100%" stop-color="#B8860B"/>
+
+    </linearGradient>
+
+    <filter id="shadow"
+            x="-20%"
+            y="-20%"
+            width="140%"
+            height="140%">
+
+      <feDropShadow
+          dx="0"
+          dy="8"
+          stdDeviation="8"
+          flood-color="#D4A017"
+          flood-opacity=".28"/>
+
+    </filter>
+
+  </defs>
+
+  <path
+      filter="url(#shadow)"
+      fill="url(#goldGradient)"
+
+      d="
+      M210 12
+      L235 46
+      L272 18
+      L286 60
+      L332 44
+      L328 90
+      L382 86
+      L360 126
+      L405 150
+      L362 175
+      L382 220
+      L332 206
+      L310 245
+      L262 220
+      L230 248
+      L210 220
+      L190 248
+      L158 220
+      L110 245
+      L88 206
+      L38 220
+      L58 175
+      L15 150
+      L60 126
+      L38 86
+      L92 90
+      L88 44
+      L134 60
+      L148 18
+      L185 46
+      Z"/>
+</svg>

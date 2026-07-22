@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 500 90"
+     preserveAspectRatio="none">
+
+    <defs>
+
+        <linearGradient id="waveGradient"
+                        x1="0%"
+                        y1="0%"
+                        x2="100%"
+                        y2="0%">
+
+            <stop offset="0%" stop-color="#F7D774"/>
+
+            <stop offset="50%" stop-color="#D4A017"/>
+
+            <stop offset="100%" stop-color="#B8860B"/>
+
+        </linearGradient>
+
+        <filter id="shadow">
+
+            <feDropShadow
+                dx="0"
+                dy="3"
+                stdDeviation="4"
+                flood-color="#B8860B"
+                flood-opacity=".18"/>
+
+        </filter>
+
+    </defs>
+
+    <path
+
+        filter="url(#shadow)"
+
+        fill="url(#waveGradient)"
+
+        d="
+        M0 45
+
+        C35 15,
+        70 15,
+        105 45
+
+        S175 75,
+        210 45
+
+        S280 15,
+        315 45
+
+        S385 75,
+        420 45
+
+        S465 15,
+        500 45
+
+        L500 90
+
+        L0 90
+
+        Z"/>
+
+</svg>

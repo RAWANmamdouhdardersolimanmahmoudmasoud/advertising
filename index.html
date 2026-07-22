@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Quick Survey</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+<body>
+
+<!-- ========================================================= -->
+<!-- Background Decoration -->
+<!-- ========================================================= -->
+
+<div class="bg-grid"></div>
+<div class="bg-circle circle-1"></div>
+<div class="bg-circle circle-2"></div>
+
+<!-- ========================================================= -->
+<!-- CONFETTI OVERLAY (تظهر أولاً) -->
+<!-- ========================================================= -->
+
+<div id="confetti"></div>
+
+<!-- ========================================================= -->
+<!-- CARD (مخفية في البداية، تظهر بعد اختفاء الكونفيتي) -->
+<!-- ========================================================= -->
+
+<main class="card">
+
+    <!-- Decorative Sparkles -->
+    <img src="assets/sparkle.svg"
+         class="sparkle sparkle-left"
+         alt="">
+
+    <img src="assets/sparkle.svg"
+         class="sparkle sparkle-right"
+         alt="">
+
+    <!-- Burst -->
+    <div class="burst">
+        <img src="assets/burst.svg"
+             alt="Burst">
+        <h1>SURPRISE!</h1>
+    </div>
+
+    <!-- Badge -->
+    <div class="badge">
+        Okay fine... 😂
+    </div>
+
+    <!-- Title -->
+    <h2>Thanks for tapping!</h2>
+    <div class="divider"></div>
+
+    <!-- Clipboard -->
+    <div class="icon-wrapper">
+        <img src="assets/clipboard.svg"
+             alt="Clipboard">
+    </div>
+
+    <!-- Description -->
+    <p class="description">
+        Help us by answering
+        this quick survey.
+        <br><br>
+        Your feedback helps us
+        improve the experience.
+    </p>
+
+    <!-- Time -->
+    <div class="time-box">
+        <span class="clock">⏳</span>
+        <span>Only <strong>3–5 Minutes</strong></span>
+    </div>
+
+    <!-- Button -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScB_cOtdge1DkdmV06Bkmok7D7fmiPqBSu_7LuYtN6SRW2o-A/viewform?usp=header"
+       target="_blank"
+       id="surveyBtn">
+        <span>Take the Survey</span>
+        <img src="assets/arrow.svg"
+             alt="Arrow">
+    </a>
+
+    <!-- Footer -->
+    <div class="footer">
+        <span>Thank you for your time 💛</span>   <!-- النص أولاً -->
+        <img src="assets/wave.svg" alt="Wave">    <!-- الصورة ثانياً -->
+    </div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
